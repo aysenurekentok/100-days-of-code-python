@@ -15,8 +15,6 @@ class Cards:
 
         self.front_side = PhotoImage(file="images/totoro_front_side.png")
         self.back_side = PhotoImage(file="images/totoro_back_side.png")
-        self.facepalm = PhotoImage(file="images/facepalm.png")
-        self.give_reward = PhotoImage(file="images/give_reward.png")
 
         self.card = Canvas(width=700, height=394, bg=BACKGROUND_COLOR, highlightthickness=0)
         self.background = self.card.create_image(350, 197, image=self.front_side)
