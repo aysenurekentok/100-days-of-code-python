@@ -6,10 +6,8 @@ response.raise_for_status()
 soup = BeautifulSoup(response.text, "html.parser")
 
 movies = soup.find_all(name="h3", class_="title")
-movies_list = []
-for movie in movies:
-    movie_name = movie.getText().split(" ", 1)[1]
-    movies_list.append(movie_name)
+
+movies_list = [movie.getText().split(" ", 1)[1] for movie in movies]
 
 with open("movies.txt", "w", encoding="utf-8") as file:
     for movie in movies_list[::-1]:
